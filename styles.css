@@ -434,14 +434,33 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 520px) {
-      .hero-wrap { min-height: auto; padding-bottom: 80px; }
-      .section-wrap { min-height: auto; padding: 60px 0 80px; }
+      .hero-wrap { 
+        min-height: 100vh; 
+        padding-bottom: 80px; 
+      }
+      .section-wrap { 
+        min-height: 100vh; 
+        padding: 60px 0 80px; 
+      }
       header {
         grid-template-columns: 1fr;
         padding: 40px 24px;
         margin: 0 auto;
+        text-align: center;
       }
-      .photo-wrap { order: -1; }
+      header .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      header .text p {
+        max-width: 100%;
+      }
+      .photo-wrap { 
+        order: -1;
+        margin: 0 auto;
+      }
       nav ul { gap: 14px; }
       .scroll-indicator { bottom: 24px; }
+      .scroll-up { bottom: 70px; }
     }
