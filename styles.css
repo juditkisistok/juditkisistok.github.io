@@ -103,14 +103,14 @@
       bottom: 0;
       left: 0;
       right: 0;
-      height: 3px;
+      height: 2px;
       background: linear-gradient(90deg,
         transparent 0%,
-        var(--teal) 20%,
+        var(--teal) 25%,
         var(--magenta) 50%,
-        var(--teal) 80%,
+        var(--teal) 75%,
         transparent 100%);
-      opacity: 0.3;
+      opacity: 0.15;
     }
 
     /* Subtle organic accent line */
@@ -235,10 +235,8 @@
       font-size: 12px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--ink);
-      border: 2px solid transparent;
-      background: linear-gradient(var(--bg), var(--bg)) padding-box,
-                  linear-gradient(135deg, var(--teal), var(--magenta)) border-box;
+      color: white;
+      background: linear-gradient(135deg, var(--teal), var(--magenta));
       padding: 12px 24px;
       text-decoration: none;
       transition: all 0.3s ease;
@@ -247,9 +245,8 @@
 
     .cta:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(90,154,154,0.15);
-      background: linear-gradient(135deg, var(--teal), var(--magenta));
-      color: white;
+      box-shadow: 0 8px 24px rgba(90,154,154,0.25);
+      opacity: 0.9;
     }
 
     /* ── PHOTO ── */
@@ -370,35 +367,17 @@
       font-family: var(--mono);
       font-size: 11px;
       letter-spacing: 0.05em;
-      border: 1.5px solid var(--rule);
       padding: 6px 14px;
-      color: var(--muted);
+      color: white;
       border-radius: 20px;
       cursor: default;
       transition: all 0.3s ease;
-      background: white;
-    }
-
-    .tag:nth-child(1):hover {
-      border-color: var(--teal);
-      color: var(--teal);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(90,154,154,0.15);
-    }
-
-    .tag:nth-child(2):hover {
       background: linear-gradient(135deg, var(--teal), var(--magenta));
-      border-color: transparent;
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(184,88,122,0.25);
     }
 
-    .tag:nth-child(3):hover {
-      border-color: var(--magenta);
-      color: var(--magenta);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(184,88,122,0.15);
+    .tag:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(90,154,154,0.3);
     }
 
     /* ── CONTACT ── */

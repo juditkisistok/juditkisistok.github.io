@@ -4,12 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Judit Kisistók</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- Shared SVG Definitions -->
+  <svg width="0" height="0" style="position: absolute;">
+    <defs>
+      <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#5a9a9a" />
+        <stop offset="100%" style="stop-color:#b8587a" />
+      </linearGradient>
+    </defs>
+  </svg>
 
   <!-- HERO SECTION (nav + header share the gradient bg) -->
   <div class="hero-wrap">
@@ -29,20 +40,14 @@
         <p>And I'm <span class="gradient-text">obsessed</span> with building ML systems people  actually love using.</p>
       </div>
       <div class="photo-wrap">
-        <img src="judit_kisistok_photo.png" alt="Judit Kisistók" /> 
+        <img src="assets/profile_photo.png" alt="Judit Kisistók" /> 
       </div>
     </header>
 
     <a href="#about" class="scroll-indicator">
       <span>Scroll</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#5a9a9a" />
-            <stop offset="100%" style="stop-color:#b8587a" />
-          </linearGradient>
-        </defs>
-        <path d="M12 5 L12 19 M12 19 L7 14 M12 19 L17 14" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 5 L12 19 M12 19 L7 14 M12 19 L17 14" stroke="url(#arrowGradient)" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </a>
 
@@ -64,15 +69,9 @@
     </div>
 
     <a href="#contact" class="scroll-indicator">
-      <span>Next</span>
+      <span>Scroll some more</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="arrowGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#5a9a9a" />
-            <stop offset="100%" style="stop-color:#b8587a" />
-          </linearGradient>
-        </defs>
-        <path d="M12 5 L12 19 M12 19 L7 14 M12 19 L17 14" stroke="url(#arrowGradient2)" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 5 L12 19 M12 19 L7 14 M12 19 L17 14" stroke="url(#arrowGradient)" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </a>
   </div>
@@ -91,15 +90,9 @@
 
     <a href="#" class="scroll-indicator scroll-up">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="arrowGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#5a9a9a" />
-            <stop offset="100%" style="stop-color:#b8587a" />
-          </linearGradient>
-        </defs>
-        <path d="M12 19 L12 5 M12 5 L7 10 M12 5 L17 10" stroke="url(#arrowGradient3)" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 19 L12 5 M12 5 L7 10 M12 5 L17 10" stroke="url(#arrowGradient)" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <span>Back to top</span>
+      <span>Go back to top</span>
     </a>
 
     <footer>
