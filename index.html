@@ -25,45 +25,86 @@
     <header>
       <div class="text">
         <h1>Hey, I'm <em>Judit</em> 👋</h1>
-        <p>I'm a Machine Learning Engineer / Data Scientist, incredibly stubborn debugger, and unexpectedly zen knitter. And I'm obsessed with building ML systems people <em>actually</em> love using.</p>
+        <p>I'm a Machine Learning Engineer, incredibly stubborn debugger, and unexpectedly zen knitter. </p>
+        <p>And I'm <span class="gradient-text">obsessed</span> with building ML systems people  actually love using.</p>
       </div>
       <div class="photo-wrap">
         <img src="judit_kisistok_photo.png" alt="Judit Kisistók" /> 
       </div>
     </header>
 
+    <a href="#about" class="scroll-indicator">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#5a9a9a" />
+            <stop offset="100%" style="stop-color:#b8587a" />
+          </linearGradient>
+        </defs>
+        <path d="M12 5 L12 19 M12 19 L7 14 M12 19 L17 14" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+
   </div><!-- /hero-wrap -->
 
-  <!-- REST OF PAGE -->
-  <div class="content">
+  <!-- ABOUT SECTION -->
+  <div class="section-wrap" id="about">
+    <div class="content">
+      <section>
+        <p class="section-label">About</p>
+        <p>My career has taken me from cancer research to fashion tech, and everywhere I've worked, I've seen the same patterns: teams either fire-fighting and shipping models without the explainability or observability work (making adoption and maintenance much harder), or endlessly perfecting models that never ship at all. That gap - between a model that works and one people actually trust enough to act on - is where I've spent most of my career.</p>
+        <p>When I'm not predicting the next pink camo jacket trend, you'll find me mentoring the next generation of devs at Hack Your Future Denmark or perfecting my knitting tension (both require surprising amounts of patience and debugging).</p>
+        <div class="tag-row">
+          <span class="tag">Production ML</span>
+          <span class="tag">Explainability</span>
+          <span class="tag">Observability</span>
+        </div>
+      </section>
+    </div>
 
-    <hr class="divider">
+    <a href="#contact" class="scroll-indicator">
+      <span>Next</span>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="arrowGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#5a9a9a" />
+            <stop offset="100%" style="stop-color:#b8587a" />
+          </linearGradient>
+        </defs>
+        <path d="M12 5 L12 19 M12 19 L7 14 M12 19 L17 14" stroke="url(#arrowGradient2)" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
 
-    <section id="about">
-      <p class="section-label">About</p>
-      <p>My career has taken me from cancer research to fashion tech, and everywhere I've worked, I've seen the same patterns: teams either fire-fighting and shipping models without the explainability or observability work (making adoption and maintenance much harder), or endlessly perfecting models that never ship at all. That gap - between a model that works and one people actually trust enough to act on - is where I've spent most of my career.</p>
-      <p>When I'm not predicting the next pink camo jacket trend, you'll find me mentoring the next generation of devs at Hack Your Future Denmark or perfecting my knitting tension (both require surprising amounts of patience and debugging).</p>
-      <div class="tag-row">
-        <span class="tag">Production ML</span>
-        <span class="tag">Explainability</span>
-        <span class="tag">Observability</span>
-      </div>
-    </section>
+  <!-- CONTACT SECTION -->
+  <div class="section-wrap" id="contact">
+    <div class="content">
+      <section>
+        <p class="section-label">Contact</p>
+        <p>I'm always excited to connect with fellow ML practitioners, anyone building something interesting / inspiring / delightfully weird, and people navigating squiggly career paths. So if that's you, holler 👋</p>
+        <div class="contact-links">
+          <a href="https://linkedin.com/in/juditkisistok" target="_blank" class="cta">Connect with me on LinkedIn →</a>
+        </div>
+      </section>
+    </div>
 
-    <hr class="divider">
-
-    <section id="contact">
-      <p class="section-label">Contact</p>
-      <p>I'm always excited to connect with fellow ML practitioners, anyone building something interesting / inspiring / delightfully weird, and people navigating squiggly career paths. So if that's you, holler 👋</p>
-      <div class="contact-links">
-        <a href="https://linkedin.com/in/juditkisistok" target="_blank" class="cta">Connect with me on LinkedIn →</a>
-      </div>
-    </section>
+    <a href="#" class="scroll-indicator scroll-up">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="arrowGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#5a9a9a" />
+            <stop offset="100%" style="stop-color:#b8587a" />
+          </linearGradient>
+        </defs>
+        <path d="M12 19 L12 5 M12 5 L7 10 M12 5 L17 10" stroke="url(#arrowGradient3)" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Back to top</span>
+    </a>
 
     <footer>
       <p>© 2026 Judit Kisistók · Aarhus, Denmark</p>
     </footer>
-
   </div>
 
 </body>
