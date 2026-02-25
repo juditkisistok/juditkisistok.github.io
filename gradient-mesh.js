@@ -5,6 +5,11 @@ class HeroAnimation {
     this.ctx = canvas.getContext('2d');
     this.particles = [];
     this.blobs = [];
+    this.colors = [
+      { r: 90, g: 154, b: 154 },
+      { r: 184, g: 88, b: 122 },
+      { r: 168, g: 188, b: 181 }
+    ];
     this.resize();
     this.init();
 
@@ -12,6 +17,13 @@ class HeroAnimation {
       this.resize();
       this.init();
     });
+  }
+
+  constrainToBounds(obj) {
+    if (obj.x < 0 || obj.x > this.canvas.width) obj.vx *= -1;
+    if (obj.y < 0 || obj.y > this.canvas.height) obj.vy *= -1;
+    obj.x = Math.max(0, Math.min(this.canvas.width, obj.x));
+    obj.y = Math.max(0, Math.min(this.canvas.height, obj.y));
   }
 
   resize() {
@@ -26,16 +38,8 @@ class HeroAnimation {
     const particleCount = 12;
     const blobCount = 3;
 
-    // Color palette
-    const colors = [
-      { r: 90, g: 154, b: 154 },   // teal
-      { r: 184, g: 88, b: 122 },   // magenta
-      { r: 168, g: 188, b: 181 }   // sage
-    ];
-
-    // Create particles
     for (let i = 0; i < particleCount; i++) {
-      const color = colors[i % colors.length];
+      const color = this.colors[i % this.colors.length];
       this.particles.push({
         x: Math.random() * this.canvas.width,
         y: Math.random() * this.canvas.height,
@@ -46,13 +50,6 @@ class HeroAnimation {
       });
     }
 
-    // Create subtle gradient blobs
-    const blobColors = [
-      { r: 90, g: 154, b: 154, a: 0.06 },   // teal
-      { r: 184, g: 88, b: 122, a: 0.06 },   // magenta
-      { r: 168, g: 188, b: 181, a: 0.05 }   // sage
-    ];
-
     for (let i = 0; i < blobCount; i++) {
       this.blobs.push({
         x: Math.random() * this.canvas.width,
@@ -60,7 +57,7 @@ class HeroAnimation {
         vx: (Math.random() - 0.5) * 0.3,
         vy: (Math.random() - 0.5) * 0.3,
         radius: 180 + Math.random() * 120,
-        color: blobColors[i]
+        color: { ...this.colors[i], a: i === 2 ? 0.05 : 0.06 }
       });
     }
 
@@ -74,12 +71,7 @@ class HeroAnimation {
     this.blobs.forEach(blob => {
       blob.x += blob.vx;
       blob.y += blob.vy;
-
-      if (blob.x < 0 || blob.x > this.canvas.width) blob.vx *= -1;
-      if (blob.y < 0 || blob.y > this.canvas.height) blob.vy *= -1;
-
-      blob.x = Math.max(0, Math.min(this.canvas.width, blob.x));
-      blob.y = Math.max(0, Math.min(this.canvas.height, blob.y));
+      this.constrainToBounds(blob);
 
       const gradient = this.ctx.createRadialGradient(
         blob.x, blob.y, 0,
@@ -97,12 +89,7 @@ class HeroAnimation {
     this.particles.forEach(particle => {
       particle.x += particle.vx;
       particle.y += particle.vy;
-
-      if (particle.x < 0 || particle.x > this.canvas.width) particle.vx *= -1;
-      if (particle.y < 0 || particle.y > this.canvas.height) particle.vy *= -1;
-
-      particle.x = Math.max(0, Math.min(this.canvas.width, particle.x));
-      particle.y = Math.max(0, Math.min(this.canvas.height, particle.y));
+      this.constrainToBounds(particle);
 
       this.ctx.beginPath();
       this.ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
