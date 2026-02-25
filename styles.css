@@ -225,7 +225,7 @@
     /* ── CONTACT ── */
     #contact { padding: 64px 0 96px; }
 
-    #contact p { font-size: 16px; color: var(--soft); max-width: 420px; margin-bottom: 28px; }
+    #contact p:not(.section-label) { font-size: 16px; color: var(--soft); max-width: 420px; margin-bottom: 28px; }
 
     .contact-links { display: flex; gap: 16px; flex-wrap: wrap; }
 
